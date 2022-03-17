@@ -1,13 +1,7 @@
 /* globals window */
 import React, { useEffect, useState } from 'react'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
-import firebase from 'firebase/app'
-import { getAuth, GithubAuthProvider } from "firebase/auth";
-
-//const githubAuthProvider = new GithubAuthProvider();
-
-// Note that next-firebase-auth inits Firebase for us,
-// so we don't need to.
+import { getAuth, GithubAuthProvider, FacebookAuthProvider, linkWithPopup} from "firebase/auth";
 
 const firebaseAuthConfig = {
   signInFlow: 'popup',
@@ -18,6 +12,10 @@ const firebaseAuthConfig = {
       provider: GithubAuthProvider.PROVIDER_ID,
       requireDisplayName: false,
     },
+    {
+      provider: FacebookAuthProvider.PROVIDER_ID,
+      requireDisplayName: false,
+    }
   ],
   signInSuccessUrl: '/',
   credentialHelper: 'none',
@@ -50,5 +48,4 @@ const FirebaseAuth = () => {
     </div>
   )
 }
-
 export default FirebaseAuth

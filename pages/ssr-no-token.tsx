@@ -30,7 +30,7 @@ const Demo: VFC<DataType> = ({ favoriteColor }) => {
   const AuthUser = useAuthUser()
   return (
     <div>
-      <Header email={AuthUser.email} signOut={AuthUser.signOut} />
+      <Header email={AuthUser.email} signOut={AuthUser.signOut} avatar={AuthUser.photoURL}/>
       <div style={styles.content}>
         <div style={styles.infoTextContainer}>
           <h3>Example: SSR + no ID token</h3>
