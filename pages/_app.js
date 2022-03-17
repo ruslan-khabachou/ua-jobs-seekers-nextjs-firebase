@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import initAuth from '../utils/initAuth'
-import FormErrorsState from '../context/formErrors/FormErrorsState'
+import FormErrorsState from '../context/formErrors/formErrorsState'
 import JobState from '../context/jobs/jobState'
 
 initAuth()
